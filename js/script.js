@@ -15,6 +15,9 @@ function searchCountries() {
 }
 
 function showCountriesList(resp) {
+    if(!Array.isArray(resp)) {
+        return;
+    }
     countriesList.innerHTML = '';
     resp.forEach(function(item) {
         var liEl = document.createElement('li');
